@@ -37,7 +37,7 @@
 }
   /* primary- */
 .el-button.el-button--primary {
-  background-color: var(--el-color-primary);
+  background-color: #b13c3c;
 }
 .el-button.el-button--primary.is-plain {
   border: rgb(160, 207, 255);

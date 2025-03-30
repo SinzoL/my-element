@@ -8,7 +8,11 @@ const routes : Array<RouteRecordRaw> = [
         children: [
             {
                 path: '/button',
-                component: () => import('../views/button/button.vue')
+                component: () => import('../views/button/ButtonView.vue')
+            },
+            {
+                path: '/container',
+                component: () => import('../views/container/ContainerView.vue')
             }
         ]
     }
