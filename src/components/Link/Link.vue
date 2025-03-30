@@ -6,7 +6,7 @@
         :target="disabled || !href? undefined:target"
         @click="handleClick"
         >
-        <el-icon v-if="icon" :icon="icon" :size="size" />
+        <el-icon v-if="icon" :icon="icon"/>
         <span class="el-link__inner">
             <slot>Link</slot>
         </span>
