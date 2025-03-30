@@ -1,7 +1,12 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-
-// https://vite.dev/config/
+import eslintPlugin from 'vite-plugin-eslint'
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), eslintPlugin()],
+  resolve: {
+    alias: {
+      '@': '/src/', // 设置@指向src
+      '@components': '/src/components', // 设置@components指向src/components
+    }
+  }
 })
