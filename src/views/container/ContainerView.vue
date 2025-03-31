@@ -2,7 +2,7 @@
   <div class="container">
     <h4> Container </h4>
     <el-container>
-      <el-aside width="200px">Aside</el-aside>
+      <el-aside :width="100">Aside</el-aside>
       <el-container>
       <el-header>Header</el-header>
       <el-main>Main</el-main>

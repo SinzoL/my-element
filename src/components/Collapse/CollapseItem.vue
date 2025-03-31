@@ -14,7 +14,7 @@
       }"
     >
       <slot name="title"> {{ title }} </slot>
-      <el-icon icon="arrow-right" class="header-angle" />
+      <el-icon icon="angle-right" class="header-angle" />
     </div>
 
     <div 
@@ -31,9 +31,10 @@
 import {inject, computed} from 'vue'
 import {collapseContextKey} from './types'
 import type {CollapseItemProps} from './types'
+import ElIcon from '../Icon/Icon.vue'
 
 defineOptions({
-    name: 'ElCollapseItems'
+    name: 'ElCollapseItem'
 })
 
 const props = defineProps<CollapseItemProps>()
@@ -44,9 +45,10 @@ const isActive = computed(() => {
     return collapseContext?.activeNames.value.includes(props.name)
 })
 
+
 const handleClick = () => {
   if(props.disabled) return
-  collapseContext?.handleVlick(props.name)
+  collapseContext?.handleItemClick(props.name)
 }
 
 </script>

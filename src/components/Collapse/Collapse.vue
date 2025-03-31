@@ -1,3 +1,5 @@
+<!--可以考虑使用缓存优化-->>
+
 <template>
     <div class="el-collapse">
         <slot> </slot>
@@ -6,7 +8,8 @@
 <script setup lang="ts">
 import {ref, provide, watch} from 'vue'
 import type {CollapseActiveName, CollapseEmits} from './types'
-import type {CollapseProps, collapseContextKey} from './types'
+import type {CollapseProps} from './types'
+import { collapseContextKey  } from './types'
 
 defineOptions({
     name: 'ElCollapse'
@@ -23,7 +26,7 @@ watch(() => props.modelValue, () => {
 
 const setActiveNames = (_activeNames: CollapseActiveName[]) => {
     activeNames.value = _activeNames
-    emits('update:modelVaalue', activeNames.value);
+    emits('update:modelValue', activeNames.value);
     emits('change', activeNames.value);
 }
 

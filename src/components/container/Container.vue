@@ -14,11 +14,14 @@ defineOptions({
 })
 
 interface ContainerProps {
-    direction: 'horizontal' | 'vertical'
+    direction?: 'horizontal' | 'vertical'
 }
 
 const slots = useSlots()
-const props = defineProps<ContainerProps>()
+
+const props = withDefaults(defineProps<ContainerProps>(), {
+  direction: 'horizontal' // 设置默认值
+});
 
 const isVertical = computed(() => {
     //优先级一

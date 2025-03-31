@@ -3,7 +3,7 @@
 @import '../components/container/style.css';
 @import '../components/Link/style.css';
 @import '../components/Icon/style.css';
-
+@import '../components/Collapse/style.css';
 
 :root {
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
