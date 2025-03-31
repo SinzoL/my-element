@@ -23,3 +23,21 @@ watch(state, (newVal) => {
 如果直接传值就会丢失响应式关联（传递的是当前值的快照，脱离了proxy的响应式控制）
 如果该属性内部还是对象的话，甚至的开启深度监听模式
 watch(() => state.obj, callback, { deep: true })
+
+
+## 3.关于注解和值初始化
+const fields: FormItemContext[] = []
+
+这一句代码说的是指定fields是一个特定类型的数组，然后其中只能添加该类型的数据，然后开始赋值为空，是一种声明时的约束，类型断言（as type）则是运行时的强制转换，我们可以看到，如下的一行代码
+
+const fields = [] as FormItemContext[];
+
+
+
+
+
+
+
+
+
+
