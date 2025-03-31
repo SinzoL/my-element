@@ -21,6 +21,10 @@ const routes : Array<RouteRecordRaw> = [
             {
                 path: '/collapse',
                 component: () => import('../views/collapse/CollapseView.vue')
+            },
+            {
+                path: '/input',
+                component: () => import('../views/input/InputView.vue')
             }
         ]
     }
