@@ -29,6 +29,10 @@ const routes : Array<RouteRecordRaw> = [
             {
                 path: '/form',
                 component: () => import('../views/form/FormView.vue')
+            },
+            {
+                path: '/datepicker',
+                component: () => import('../views/datepicker/DatepickerView.vue')
             }
         ]
     }
