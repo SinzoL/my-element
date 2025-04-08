@@ -3,10 +3,10 @@
     <div class="calender-opeerate">
       <div class="button-group">
         <button class="button" @click="changeMonth('prev')">
-          <icon icon="angle-left" size="10x"></icon>
+          <icon icon="angle-left" size="2x"></icon>
         </button>
         <button class="button" @click="changeMonth('next')">
-          <icon icon="angle-right" size="10x"></icon>
+          <icon icon="angle-right" size="2x"></icon>
         </button>
       </div>
       <div class="calender-operate__title">{{ dateText }}</div>
