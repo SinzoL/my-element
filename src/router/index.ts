@@ -25,6 +25,10 @@ const routes : Array<RouteRecordRaw> = [
             {
                 path: '/input',
                 component: () => import('../views/input/InputView.vue')
+            },
+            {
+                path: '/form',
+                component: () => import('../views/form/FormView.vue')
             }
         ]
     }

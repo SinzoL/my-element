@@ -43,7 +43,7 @@ import type { InputProps, InputEmits } from "./types";
 import { ref, computed, useSlots, watch, inject } from "vue";
 import type { Ref } from "vue";
 import ElIcon from "../Icon/Icon.vue";
-import { formItemContextKey } from "./types";
+import { formItemContextKey } from "../Form/types";
 
 const isFocus = ref(false);
 const slots = useSlots();
@@ -65,9 +65,10 @@ const computedClass = computed(() => {
     "is-focus": isFocus.value,
   };
 });
-
+//在input嗓绑定modelValue
 const inputValue = ref(props.modelValue);
-const formItemContext = inject(formItemContextKey, {});
+
+const formItemContext = inject(formItemContextKey, null);
 const runValidation = (trigger: string) => {
   if (props.validateEvent) {
     formItemContext?.validate?.(trigger).catch((err: unknown) => console.error(err));
@@ -87,7 +88,7 @@ const handleChange = () => {
   runValidation("change");
 };
 
-const handleFocus = (e: Event) => {
+const handleFocus = (e: FocusEvent) => {
   isFocus.value = true;
   emits("focus", e);
 };
@@ -150,4 +151,3 @@ defineOptions({
 });
 </script>
 
-<style scoped></style>

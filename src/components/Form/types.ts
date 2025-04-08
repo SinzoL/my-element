@@ -1,5 +1,5 @@
 import type { PropType, InjectionKey, ExtractPropTypes } from 'vue'
-import type { Rules, RuleItem, ValidateError, ValidateFieldsError } from 'async-validator'
+import type { RuleItem, ValidateError, ValidateFieldsError } from 'async-validator'
 
 //表单项规则类型
 export interface FormItemRule extends RuleItem {

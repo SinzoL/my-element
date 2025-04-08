@@ -7,8 +7,10 @@ export interface InputProps {
     showClear?:boolean;      //是否显示清除按钮
     placeholder?:string;     //输入框的占位符
     size?:string;            //输入框的大小
+    showPassword?:boolean;   //是否显示密码
     prefixIcon?:string;      //输入框的前缀图标
     suffixIcon?:string;      //输入框的后缀标签
+    label?:string;           //输入框的标签
     readonly?:boolean;       //输入框的标签文本
     autofocus?:boolean;      //是否自动获取焦点
     form?:string;            //表单名称
@@ -22,8 +24,8 @@ export interface InputEmits {
     (e: 'update:modelValue', value: string): void; //值改变，随时关注输入，Vue3规范双向绑定
     (e: 'change', value: string): void;            //值改变，需失去焦点，最终验证
     (e: 'input', value: string): void;             //值改变，兼容原生js和Vue2
-    (e: 'focus', value: string): void;             //获取焦点时触发
-    (e: 'blur', value: string): void;              //失去焦点时触发
+    (e: 'focus', value: FocusEvent): void;             //获取焦点时触发
+    (e: 'blur', value: FocusEvent): void;              //失去焦点时触发
     (e: 'clear'): void                             //清除输入
 }
 
