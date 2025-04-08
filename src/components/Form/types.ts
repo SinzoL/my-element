@@ -25,7 +25,7 @@ export const formItemProps = {
         type: String
     },
     prop: {
-        type: Object
+        type: String
     },
     showMessage: {
         type: Boolean,
