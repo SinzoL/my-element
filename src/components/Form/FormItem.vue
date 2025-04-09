@@ -55,8 +55,6 @@ const validateStatus = reactive({
 //表单项的引用
 const formItemRef = ref<HTMLDivElement>();
 
-
-
 const getItemRules = computed(() => {
   const rules = formContext?.rules;
   if (rules && props.prop && rules[props.prop]) {
@@ -84,11 +82,9 @@ const getTriggeredRules = (trigger?: string) => {
   return [];
 };
 
-
 //初始值
 type initialValueType = string | number | boolean | object | undefined | null;
 let initialValue: initialValueType = undefined;
-
 
 //计算属性
 const innerValue = computed(() => {
@@ -98,7 +94,7 @@ const innerValue = computed(() => {
   if (model && props.prop && !isNil(model[props.prop])) {
     return model[props.prop] as initialValueType;
   } else {
-    return null as initialValueType; 
+    return null as initialValueType;
   }
 });
 
@@ -130,7 +126,7 @@ const validate = async (trigger?: string): Promise<boolean> => {
           validateStatus.loading = false;
         });
     } else {
-        return false;
+      return false;
     }
   } catch {
     return false;

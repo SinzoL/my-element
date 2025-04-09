@@ -1,18 +1,18 @@
 <template>
-  <div class="calender">
-    <div class="calender-opeerate">
+  <div class="calendar">
+    <div class="calendar-operate">
       <div class="button-group">
         <button class="button" @click="changeMonth('prev')">
-          <icon icon="angle-left" size="2x"></icon>
+          <icon icon="arrow-left" size="2x"></icon>
         </button>
         <button class="button" @click="changeMonth('next')">
-          <icon icon="angle-right" size="2x"></icon>
+          <icon icon="arrow-right" size="2x"></icon>
         </button>
       </div>
       <div class="calender-operate__title">{{ dateText }}</div>
       <button class="button" :disabled="isToday" @click="currentDate">今天</button>
     </div>
-    <div class="calender-header">
+    <div class="calendar-header">
       <span
         v-for="(item, index) in weekMapZh"
         :key="index"
@@ -22,12 +22,13 @@
         {{ item }}
       </span>
     </div>
-    <div class="calender-content" :data-month="date.getMonth() + 1">
+    <div class="calendar-content" :data-month="date.getMonth() + 1">
       <div
         v-for="(item, index) in calendarTable"
         :key="index"
         class="calendar-content__item"
-        :class="[{ light: !(item.isCurrentMonth) }, { active: isActive(item) }]"
+        :class="[{ light: !item.isCurrentMonth }, { active: isActive(item) }]"
+        @click="() => hancleClick(item)"
       >
         {{ item.day }}
       </div>
@@ -40,6 +41,7 @@ import Icon from "../Icon/Icon.vue";
 import { weekMapZh, generateCalendar } from "./calendar";
 import { isAllTrue } from "./calendar";
 import { CalendarItem } from "./calendar";
+import { selectEmits } from "./types";
 
 const date = ref<Date>(new Date());
 const calendarTable = computed(() => generateCalendar(date.value));
@@ -48,12 +50,13 @@ const dateText = computed(() => {
   return `${date.value.getFullYear()}年${date.value.getMonth() + 1}月`;
 });
 
+const selectedDate = ref<Date>(new Date());
 const isToday = computed(() => {
   const current = new Date();
   const validArr = [
     date.value.getFullYear() === current.getFullYear(),
     date.value.getMonth() === current.getMonth(),
-    date.value.getDay() === current.getDay(),
+    date.value.getDay() === current.getDate(),
   ];
   return isAllTrue(validArr);
 });
@@ -61,10 +64,11 @@ const isToday = computed(() => {
 //当天日期高亮显示，兼容切换日期
 //确保年月日准确
 const isActive = (item: CalendarItem) => {
+  //const tmpdate = new Date();
   return isAllTrue([
-    item.year === date.value.getFullYear(),
-    item.month === date.value.getMonth() + 1,
-    item.day === date.value.getDate(),
+    item.year === selectedDate.value.getFullYear(),
+    item.month === selectedDate.value.getMonth(),
+    item.day === selectedDate.value.getDate(),
     item.isCurrentMonth,
   ]);
 };
@@ -77,24 +81,33 @@ const changeMonth = (type: "prev" | "next"): void => {
   let month = 0;
   let year = 1970;
   if (type === "prev") {
+    console.log("prev");
     month = date.value.getMonth() === 0 ? 11 : date.value.getMonth() - 1;
     year = month === 11 ? date.value.getFullYear() - 1 : date.value.getFullYear();
   } else {
-    month = (date.value.getMonth() === 11 ? 0 : date.value.getMonth() + 1);
-    year = (month === 0 ? date.value.getFullYear() + 1 : date.value.getFullYear());
+    console.log("next");
+    month = date.value.getMonth() === 11 ? 0 : date.value.getMonth() + 1;
+    year = month === 0 ? date.value.getFullYear() + 1 : date.value.getFullYear();
   }
-  if(month === new Date().getMonth()) {
-    currentDate()
-    return
+  if (month === new Date().getMonth() && year === new Date().getFullYear()) {
+    currentDate();
+    return;
   }
 
-  date.value.setDate(1)
-  date.value.setMonth(month)
-  date.value.setFullYear(year)
-  date.value = new Date(date.value)
+  date.value.setDate(1);
+  date.value.setMonth(month);
+  date.value.setFullYear(year);
+  date.value = new Date(date.value);
 };
 
 
+const emits = defineEmits<selectEmits>();
+
+const hancleClick = (item: CalendarItem) => {
+  console.log(item);
+  selectedDate.value = new Date(item.year, item.month, item.day);
+  emits('update:selectedDate', selectedDate.value);
+};
 </script>
 
 <style scoped lang="scss">
