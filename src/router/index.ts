@@ -33,6 +33,14 @@ const routes : Array<RouteRecordRaw> = [
             {
                 path: '/datepicker',
                 component: () => import('../views/datepicker/DatepickerView.vue')
+            },
+            {
+                path: 'alert',
+                component: () => import('../views/alert/AlertView.vue')
+            }, 
+            {
+                path: 'rate',
+                component: () => import('../views/rate/RateView.vue')
             }
         ]
     }
