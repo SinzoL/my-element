@@ -11,7 +11,7 @@
             <slot/>
         </div>
 
-        <!-- 内容 -->>
+        <!-- 内容 -->
         <Transition :name="tran">
             <div 
                 class="el-tooltip__popper" 
@@ -95,19 +95,19 @@ const popperOptions = computed(() => {
 
 
 //初始化打开和关闭的次数
-let closeTimes = 0
-let openTimes = 0
+//let closeTimes = 0
+//let openTimes = 0
 
 
 //定义打开和关闭的函数
 const open = () => {
-    openTimes++
+    //openTimes++
     isOpen.value = true
     emits('visible-change', true)
 }
 
 const close = () => {
-    closeTimes++
+    //closeTimes++
     isOpen.value = false
     emits('visible-change', false)
 }

@@ -1,7 +1,7 @@
-import { createRouter, createWebHashHistory} from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
 
-const routes : Array<RouteRecordRaw> = [
+const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
         component: () => import('../views/index.vue'),
@@ -35,12 +35,20 @@ const routes : Array<RouteRecordRaw> = [
                 component: () => import('../views/datepicker/DatepickerView.vue')
             },
             {
-                path: 'alert',
+                path: '/alert',
                 component: () => import('../views/alert/AlertView.vue')
-            }, 
+            },
             {
-                path: 'rate',
+                path: '/rate',
                 component: () => import('../views/rate/RateView.vue')
+            },
+            {
+                path: '/tooltip',
+                component: () => import('../views/tooltip/TooltipView.vue')
+            },
+            {
+                path: '/switch',
+                component: () => import('../views/switch/SwitchView.vue')
             }
         ]
     }
