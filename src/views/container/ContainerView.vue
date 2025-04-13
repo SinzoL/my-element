@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import ElContainer from '@/components/Container/Container.vue'
 import ElHeader from '@/components/Container/MainHeader.vue'
-import ElMain from '@/components/Container/MainPart.vue'
+import ElMain from '@/components/Container/Main.vue'
 import ElAside from '@/components/Container/MainAside.vue'
 
 defineOptions({

@@ -12,6 +12,10 @@
 @import '../components/Rate/style.css';
 @import '../components/Tooltip/style.css';
 @import '../components/Switch/style.css';
+@import '../components/Message/style.css';
+@import '../components/MessageBox/style.css';
+@import '../components/DropDown/style.css';
+@import '../components/Select/style.css';
 
 :root {
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

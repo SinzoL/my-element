@@ -1,0 +1,19 @@
+.vp-doc .vitepress-demo-preview-preview ul, .vp-doc .vitepress-demo-preview-preview  ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 使 sidebar 的文本居左对齐 */
+.vitepress-theme-default .sidebar ul {
+  text-align: left;
+  padding-left: 20px; /* 根据需要设置 padding */
+}
+
+.vitepress-theme-default .sidebar .sidebar-group {
+  text-align: left;
+}
+
+.vitepress-theme-default .sidebar .sidebar-group > ul {
+  padding-left: 20px; /* 为列表项设置左侧内边距 */
+}
