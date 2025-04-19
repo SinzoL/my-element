@@ -2,12 +2,12 @@
   "hash": "28804a3a",
   "configHash": "fde3e5e1",
   "lockfileHash": "3c557d0b",
-  "browserHash": "6c40d8c1",
+  "browserHash": "76a03b5d",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "cf2666a5",
+      "fileHash": "8cda6cf7",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
@@ -19,13 +19,13 @@
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "4fcd1eb2",
+      "fileHash": "972640c6",
       "needsInterop": false
     },
     "@fortawesome/fontawesome-svg-core": {
       "src": "../../../../node_modules/@fortawesome/fontawesome-svg-core/index.mjs",
       "file": "@fortawesome_fontawesome-svg-core.js",
-      "fileHash": "58aa6ea7",
+      "fileHash": "0f6159be",
       "needsInterop": false
     },
     "@fortawesome/free-solid-svg-icons": {
@@ -37,13 +37,13 @@
     "@vitepress-demo-preview/component": {
       "src": "../../../../node_modules/@vitepress-demo-preview/component/dist/preview-component.js",
       "file": "@vitepress-demo-preview_component.js",
-      "fileHash": "f0ea81b2",
+      "fileHash": "95d13e0d",
       "needsInterop": false
     },
     "@fortawesome/vue-fontawesome": {
       "src": "../../../../node_modules/@fortawesome/vue-fontawesome/index.es.js",
       "file": "@fortawesome_vue-fontawesome.js",
-      "fileHash": "a6eed5bc",
+      "fileHash": "3c6ac011",
       "needsInterop": false
     },
     "lodash-es": {
@@ -57,14 +57,20 @@
       "file": "@popperjs_core.js",
       "fileHash": "34a8622c",
       "needsInterop": false
+    },
+    "async-validator": {
+      "src": "../../../../node_modules/async-validator/dist-web/index.js",
+      "file": "async-validator.js",
+      "fileHash": "044a5ab8",
+      "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-LW4I4DCF": {
-      "file": "chunk-LW4I4DCF.js"
-    },
     "chunk-3IJK52MP": {
       "file": "chunk-3IJK52MP.js"
+    },
+    "chunk-LW4I4DCF": {
+      "file": "chunk-LW4I4DCF.js"
     }
   }
 }

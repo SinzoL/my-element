@@ -3,8 +3,7 @@ title: Switch
 description: Switch组件文档
 ---
 
-# Button 按钮
-
+# Switch 开关
 表示两种互相对立的状态见的切换，用于触发 开关
 
 ## 基础用法
