@@ -17,3 +17,15 @@
 .vitepress-theme-default .sidebar .sidebar-group > ul {
   padding-left: 20px; /* 为列表项设置左侧内边距 */
 }
+
+.VPButton.brand {
+  background-color: #39e66d !important;
+  color: #fff !important;
+  border-color: #3fe639 !important;
+}
+.clip[data-v-72cc4481] {
+  background: var(--vp-home-hero-name-background);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: #1ac768;
+}
