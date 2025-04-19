@@ -7,7 +7,7 @@ export type NativeType = 'button' | 'submit' | 'reset';
 export const buttonProps = {
     type: {
         type: String as PropType<ButtonType>,
-        default: 'default'
+        default: 'primary'
     },
     size: {
         type: String as PropType<ButtonSize>,
