@@ -26,7 +26,10 @@ npm install
 # 或使用 pnpm / yarn
 ```
 
-### 启动开发服务器
+### 启动展现文档
+```bash
+npm run docs:dev
+```
 
 访问：http://localhost:5173
 
