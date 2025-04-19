@@ -12,13 +12,13 @@ hero:
       link: /components/button
     - theme: alt
       text: View on Github
-      link: /api-examples
+      link: https://github.com/SinzoL/my-element
 
 features:
   - title: 技术栈
     details: Vue3 + TypeScript
   - title: 涵盖内容
-    details: 覆盖elmentui中常见的15+组件
+    details: 实现常见的15+组件
   - title: 持续优化
     details: 组件持续更新中
 ---

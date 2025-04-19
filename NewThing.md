@@ -1,8 +1,10 @@
-## 1.关于computed和watch的返回值
+# 一些开发中的技术问题
+
+#### 1.关于computed和watch的返回值
 
 computed的返回值是computedRef，继承自ref，是响应式类型变量，而watch的返回值是停止监视函数，当你调用后就会停止建设那个监听操作
 
-## 2.函数包装变量产生的响应式
+#### 2.函数包装变量产生的响应式
 const inputType = ref(props.type);
 watch(() => props.type, (newType) => {
     inputType.value = newType
@@ -25,13 +27,19 @@ watch(state, (newVal) => {
 watch(() => state.obj, callback, { deep: true })
 
 
-## 3.关于注解和值初始化
+#### 3.关于注解和值初始化
 const fields: FormItemContext[] = []
 
 这一句代码说的是指定fields是一个特定类型的数组，然后其中只能添加该类型的数据，然后开始赋值为空，是一种声明时的约束，类型断言（as type）则是运行时的强制转换，我们可以看到，如下的一行代码
 
 const fields = [] as FormItemContext[];
 
+#### 4.新增一个组件的步骤
+
+1.在src/components/中添加相应的文件夹
+2.建立必要的vue、type.ts、style.css文件
+3.先设计好相应的组件，然后编写对应的样式和设计文件
+4.在总的/style/index.css文件中引入对应的样式文件
 
 
 

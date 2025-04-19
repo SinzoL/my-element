@@ -3,7 +3,7 @@ import { containerPreview, componentPreview } from '@vitepress-demo-preview/plug
 import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
-  title: "ElElement",
+  title: "MyElement",
   description: "A VitePress Site",
   vite: {
     resolve: {
