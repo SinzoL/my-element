@@ -2,8 +2,14 @@
     "version": 2,
     "builds": [
         {
-            "src": "docs/.vitepress/dist/**",
+            "src": "docs/.vitepress/dist/**/*",
             "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "docs/.vitepress/dist/$1"
         }
     ],
     "build": {
