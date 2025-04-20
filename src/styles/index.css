@@ -16,7 +16,7 @@
 @import '../components/MessageBox/style.css';
 @import '../components/DropDown/style.css';
 @import '../components/Select/style.css';
-
+@import '../components/Timer/style.css';
 :root {
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;

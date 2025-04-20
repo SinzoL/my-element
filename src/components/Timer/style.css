@@ -1,0 +1,69 @@
+.el-timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.el-timer {
+    background-color: #e6eceb;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 250px;
+}
+
+.el-time-display {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.el-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.el-button {
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.el-button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.el-button--success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.el-button--success:hover {
+    background-color: #45a049;
+}
+
+.el-button--danger {
+    background-color: #f44336;
+    color: white;
+}
+
+.el-button--danger:hover {
+    background-color: #e53935;
+}
+
+.el-button--primary {
+    background-color: #2196f3;
+    color: white;
+}
+
+.el-button--primary:hover {
+    background-color: #1976d2;
+}

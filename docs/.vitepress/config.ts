@@ -38,6 +38,7 @@ export default defineConfig({
           { text: '链接 Link', link: '/components/link'},
           { text: '折叠面板 Collapse', link: '/components/collapse'},
           { text: '图标 Icon', link: '/components/icon'},
+          {text: '计时器 Timer', link: '/components/timer'},
         ]
       },
       {

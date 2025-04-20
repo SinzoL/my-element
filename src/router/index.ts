@@ -49,6 +49,10 @@ const routes: Array<RouteRecordRaw> = [
             {
                 path: '/switch',
                 component: () => import('../views/switch/SwitchView.vue')
+            },
+            {
+                path: '/timer',
+                component: () => import('../views/timer/TimerView.vue')
             }
         ]
     }
